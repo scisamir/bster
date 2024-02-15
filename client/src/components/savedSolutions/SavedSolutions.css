@@ -14,7 +14,9 @@ section#saved_solutions .saved_box {
 section#saved_solutions h3 {
     position: absolute;
     padding: 5px 10px;
-    background-color: #a8ccd7;
+    background-color: #fff;
+    border-top: 2px solid #dedede;
+    border-left: 2px solid #dedede;
     border-top-left-radius: 8px;
 }
 

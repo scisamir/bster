@@ -19,17 +19,26 @@ function Layout() {
                 >
                     <TiArrowBack color='#fff' fontSize='1.2rem' />
                 </div>
-                <Link to='/'>
+                <Link to='/' className='nav_links'>
                     <IoMdHome fontSize='1.8rem' />
+                    <span>Home</span>
                 </Link>
-                <Link to='/topics'>
+                <Link to='/topics' className='nav_links'>
                     <IoMdSearch fontSize='1.8rem' />
+                    <span>Search</span>
                 </Link>
-                <IoMdPlayCircle fontSize='1.8rem' />
-                <Link to='/saved'>
+                <Link to='/' className='nav_links'>
+                    <IoMdPlayCircle fontSize='1.8rem' />
+                    <span>Bio</span>
+                </Link>
+                <Link to='/saved' className='nav_links'>
                     <FaSave fontSize='1.8rem' />
+                    <span>Saved</span>
                 </Link>
-                <BsFillPersonFill fontSize='1.8rem' />
+                <Link to='*' className='nav_links'>
+                    <BsFillPersonFill fontSize='1.8rem' />
+                    <span>Profile</span>
+                </Link>
             </nav>
             <section>
                 <Outlet />

@@ -2,6 +2,8 @@ section#layout nav {
     position: fixed;
     display: flex;
     flex-direction: column;
+    /* gap: -40px; */
+    /* justify-content: flex-start; */
     width: 144px;
     background-color: #dedede;
     height: 100vh;
@@ -13,6 +15,14 @@ section#layout nav > * {
     margin: auto;
     cursor: pointer;
     color: #000;
+}
+
+section#layout nav > .nav_links {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    text-decoration: none;
+    align-items: center;
 }
 
 section#layout > section {

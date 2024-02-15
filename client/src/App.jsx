@@ -33,7 +33,6 @@ function App() {
           <Route path='correlation' element={<Correlation savedSolutions={savedSolutions} setSavedSolutions={setSavedSolutions} />} />
           <Route path='saved' element={<SavedSolutions savedSolutions={savedSolutions} setSavedSolutions={setSavedSolutions} />} />
         </Route>
-        
         <Route path='*' element={<NoPage />} />
       </Routes>
     </BrowserRouter>

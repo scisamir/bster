@@ -1,5 +1,7 @@
 import './Correlation.css'
 import { useEffect, useId, useState } from 'react'
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 function Correlation({ savedSolutions, setSavedSolutions }) {
     const newId = useId();
@@ -16,7 +18,6 @@ function Correlation({ savedSolutions, setSavedSolutions }) {
             setCorrelationSolution(savedSolutions.inView.correlationSolution);
         }
     }, [savedSolutions])
-    
 
     const handleAdd = (e) => {
         console.log(e);
@@ -115,6 +116,8 @@ function Correlation({ savedSolutions, setSavedSolutions }) {
                 correlation: prevState.correlation ? [...prevState.correlation, newSolution] : [newSolution],
                 inView: { ...newSolution, disable_input: false }
             }));
+
+            toast("Solution successfully saved!");
         }
 
         console.log("The saved solutions", savedSolutions);
@@ -131,6 +134,7 @@ function Correlation({ savedSolutions, setSavedSolutions }) {
 
     return (
         <section id="correlation">
+            <ToastContainer />
             <h2>Correlation</h2>
             <h5>Solving correlation questions have never been easier!</h5>
             <div id="correlation_main">
