@@ -1,0 +1,64 @@
+section#topics {
+    display: flex;
+}
+
+section#topics main {
+    padding-top: 40px;
+}
+
+section#topics main h2 {
+    margin-bottom: 12px;
+    font-weight: 600;
+    font-size: 28px;
+}
+
+section#topics main div.the_topics {
+    display: flex;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+section#topics main div.topic {
+    width: 300px;
+    height: 200px;
+    background-color: #dedede;
+    border-radius: 8px;
+}
+
+main div.topic div.topic_image {
+    height: 70%;
+}
+
+main div.topic img {
+    height: 100%;
+    width: 100%;
+    display: block;
+    object-fit: cover;
+}
+
+main div.topic div.topic_description {
+    display: flex;
+    margin-top: 8px;
+    justify-content: space-around;
+    align-items: center;
+}
+
+div.topic_description p.topic_intro {
+    font-weight: 500;
+    font-size: 18px;
+}
+
+div.topic_description button.go_to_topic {
+    padding: 12px 10px;
+    border-radius: 8px;
+    border: none;
+    background-color: #000;
+    font-weight: 500;
+    font-size: 16px;
+    cursor: pointer;
+    color: #fff;
+}
+
+section#topics main h2:nth-child(3) {
+    margin-top: 40px;
+}

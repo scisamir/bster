@@ -1,0 +1,146 @@
+section#correlation {
+    text-align: center;
+    margin-left: -84px;
+    padding-top: 30px;
+}
+
+section#correlation h2 {
+    font-size: 32px;
+}
+
+section#correlation h5 {
+    color: #444;
+    max-width: 80%;
+    margin: auto;
+}
+
+section#correlation div#correlation_main {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 50px;
+}
+
+div#correlation_main div#correlation_solution {
+    text-align: left;
+}
+
+div#correlation_solution div.correlation_answers {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+div#correlation_solution button {
+    padding: 10px 12px;
+    border-radius: 8px;
+    border: none;
+    background-color: #7fffd4;
+    margin: 20px auto;
+    display: block;
+    font-weight: 600;
+    color: #444;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+div#correlation_solution button:disabled {
+    color: #9f9f9f;
+    background: #777777;
+    cursor: not-allowed;
+}
+
+table#correlation_table {
+    border-collapse: collapse;
+    margin: 30px auto;
+}
+
+table#correlation_table td,
+table#correlation_table th {
+    border: 1px solid #ddd;
+    text-align: left;
+    padding: 8px;
+    font-size: 16px;
+}
+
+table#correlation_table tr:nth-child(even) {
+    background-color: #ddd;
+}
+
+section#correlation form {
+    margin-top: 75px;
+}
+
+section#correlation form div:nth-child(1) {
+    margin-bottom: 10px;
+}
+
+section#correlation form input {
+    height: 30px;
+    width: 80px;
+    border-radius: 8px;
+    text-align: center;
+    font-size: 16px;
+}
+
+section#correlation form label {
+    display: block;
+    font-size: 24px;
+    font-weight: 500;
+}
+
+section#correlation form label:nth-child(1) {
+    margin-bottom: 10px;
+}
+
+section#correlation form div {
+    margin-top: 20px;
+}
+
+section#correlation form button {
+    width: 64px;
+    height: 32px;
+    border-radius: 8px;
+    border: none;
+    background-color: #7fffd4;
+    margin: 10px auto 0 auto;
+    font-weight: 600;
+    color: #444;
+    cursor: pointer;
+}
+
+section#correlation form button:nth-child(1) {
+    margin-right: 10px;
+}
+
+section#correlation form div#clear_correlation {
+    background-color: #ff0e0e;
+    width: fit-content;
+    margin: auto;
+    border-radius: 8px;
+    padding: 7px 7px;
+    font-weight: 500;
+    color: #fff;
+    margin-top: 12px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+@media screen and (max-width: 768px) {
+    section#correlation div#correlation_main {
+        display: flex;
+        flex-direction: column-reverse;
+        margin-top: 0px;
+    }
+    section#correlation form {
+        margin-top: 0px;
+        margin-bottom: 30px;
+    }
+    div#correlation_main div#correlation_solution {
+        text-align: center;
+    }
+}
+
+@media screen and (max-width: 620px) {
+    section#correlation {
+        margin-left: -40px;
+    }
+}

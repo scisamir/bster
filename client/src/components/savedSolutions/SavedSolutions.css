@@ -1,0 +1,40 @@
+section#saved_solutions h2 {
+    margin-bottom: 30px;
+    padding-top: 30px;
+}
+
+section#saved_solutions .saved_box {
+    width: 300px;
+    height: 200px;
+    background-color: #dedede;
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+
+section#saved_solutions h3 {
+    position: absolute;
+    padding: 5px 10px;
+    background-color: #a8ccd7;
+    border-top-left-radius: 8px;
+}
+
+section#saved_solutions div > p {
+    padding-top: 60px;
+    text-align: center;
+    font-size: 18px;
+    font-weight: 500;
+}
+
+section#saved_solutions button {
+    padding: 12px 10px;
+    border-radius: 8px;
+    border: none;
+    background-color: #000;
+    font-weight: 500;
+    font-size: 16px;
+    cursor: pointer;
+    color: #fff;
+    display: block;
+    margin: auto;
+    margin-top: 20px;
+}

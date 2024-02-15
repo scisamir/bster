@@ -1,0 +1,58 @@
+section#home {
+    display: flex;
+    padding: 30px;
+    justify-content: space-between;
+}
+
+section#home div#banner {
+    margin: auto 0;
+    background-color: #dedede;
+    border-radius: 16px;
+    height: 90vh;
+    width: 60%;
+    display: flex;
+}
+
+section#home div#banner img {
+    display: block;
+    margin: auto;
+    border-radius: 16px;
+    width: 70%;
+}
+
+section#home div#intro {
+    margin: auto;
+    text-align: center;
+}
+
+section#home div#intro img {
+    margin-bottom: 20px;
+}
+
+section#home div#intro h1 {
+    font-size: 32px;
+    margin-bottom: 15px;
+}
+
+section#home div#intro p {
+    max-width: 70%;
+    margin: auto;
+    font-weight: 500;
+    color: gray;
+}
+
+section#home div#intro p:nth-child(3) {
+    margin-bottom: 5px;
+}
+
+section#home div#intro button {
+    padding: 15px 12px;
+    border-radius: 8px;
+    border: none;
+    background-color: #7fffd4;
+    margin: 40px auto 0 auto;
+    font-weight: 600;
+    font-size: 20px;
+    cursor: pointer;
+    color: #333;
+}

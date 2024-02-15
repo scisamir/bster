@@ -1,0 +1,44 @@
+section#layout nav {
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    width: 144px;
+    background-color: #dedede;
+    height: 100vh;
+    margin-right: 50px;
+    padding: 20px 0;
+}
+
+section#layout nav > * {
+    margin: auto;
+    cursor: pointer;
+    color: #000;
+}
+
+section#layout > section {
+    margin-left: 200px;
+}
+
+@media screen and (max-width: 620px) {
+    section#layout nav {
+        width: 96px;
+    }
+    section#layout > section {
+        margin-left: 120px;
+    }
+    section#layout nav {
+        margin-right: 25px;
+    }
+}
+
+@media screen and (max-width: 475px) {
+    section#layout nav {
+        width: 84px;
+    }
+    section#layout > section {
+        margin-left: 104px;
+    }
+    section#layout nav {
+        margin-right: 25px;
+    }
+}
