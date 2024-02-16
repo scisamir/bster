@@ -24,6 +24,25 @@ div#correlation_main div#correlation_solution {
     text-align: left;
 }
 
+div#correlation_solution > h3 {
+    font-weight: 500;
+    font-size: 16px;
+    display: inline-block;
+}
+
+div#correlation_solution div#clear_correlation {
+    background-color: #ff0e0e;
+    width: fit-content;
+    margin: auto;
+    border-radius: 8px; 
+    padding: 7px 7px;
+    font-weight: 500;
+    color: #fff;
+    margin-bottom: 30px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
 div#correlation_solution div.correlation_answers {
     font-size: 18px;
     margin-bottom: 10px;
@@ -111,19 +130,6 @@ section#correlation form button:nth-child(1) {
     margin-right: 10px;
 }
 
-section#correlation form div#clear_correlation {
-    background-color: #ff0e0e;
-    width: fit-content;
-    margin: auto;
-    border-radius: 8px;
-    padding: 7px 7px;
-    font-weight: 500;
-    color: #fff;
-    margin-top: 30px;
-    font-size: 16px;
-    cursor: pointer;
-}
-
 @media screen and (max-width: 768px) {
     section#correlation div#correlation_main {
         display: flex;
@@ -132,7 +138,7 @@ section#correlation form div#clear_correlation {
     }
     section#correlation form {
         margin-top: 0px;
-        margin-bottom: 30px;
+        margin-bottom: 50px;
     }
     div#correlation_main div#correlation_solution {
         text-align: center;

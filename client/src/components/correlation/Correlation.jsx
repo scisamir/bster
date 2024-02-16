@@ -145,6 +145,7 @@ function Correlation({ savedSolutions, setSavedSolutions }) {
             <h5>Solving correlation questions have never been easier!</h5>
             <div id="correlation_main">
                 <div id="correlation_solution">
+                    <h3>Recent Solution: </h3>
                     <table id="correlation_table">
                         <thead>
                             <tr>
@@ -176,6 +177,7 @@ function Correlation({ savedSolutions, setSavedSolutions }) {
                     <div className="correlation_answers"><span style={{ fontWeight: 600 }}>r</span> = Sxy / (&#8730; Sxx * Sxy) = {correlationSolution && correlationSolution.correlationR ? correlationSolution.correlationR : ""}</div>
 
                     <button disabled={(correlationSolution && !correlationSolution.correlationR) || (savedSolutions.inView && savedSolutions.inView.disable_input)} onClick={handleSaveSolution}>Save Solution</button>
+                    <div id='clear_correlation' onClick={handleClearCorrelation}>Clear Solution</div>
                 </div>
  
                 <form onSubmit={handleSubmit}>
@@ -186,7 +188,6 @@ function Correlation({ savedSolutions, setSavedSolutions }) {
                         <button onClick={handleAdd}>Add</button>
                         <button onClick={handleAdd}>Submit</button>
                     </div>
-                    <div id='clear_correlation' onClick={handleClearCorrelation}>Clear Solution</div>
                 </form>
             </div>
         </section>
