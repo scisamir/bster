@@ -78,3 +78,12 @@ section#home div#intro > a#copyright {
     right: 24px;
     font-weight: 500;
 }
+
+@media screen and (max-width: 540px) {
+    section#home div#banner {
+        height: 80vh;
+    }
+    section#home div#intro {
+        margin-top: 5vh;
+    }
+}

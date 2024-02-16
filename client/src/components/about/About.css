@@ -46,3 +46,10 @@ section#about p#project_repo {
 section#about p#project_repo > a {
     color: #000;
 }
+
+@media screen and (max-width: 540px) {
+    section#about p#project_repo {
+        font-size: 18px;
+        margin-bottom: 30px;
+    }
+}

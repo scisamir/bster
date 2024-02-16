@@ -16,6 +16,7 @@ section#topics main div.the_topics {
     display: flex;
     gap: 30px;
     flex-wrap: wrap;
+    margin-bottom: 30px;
 }
 
 section#topics main div.topic {
@@ -61,4 +62,10 @@ div.topic_description button.go_to_topic {
 
 section#topics main h2:nth-child(3) {
     margin-top: 40px;
+}
+
+@media screen and (max-width: 540px) {
+    section#topics main div.topic {
+        width: 240px;
+    }
 }

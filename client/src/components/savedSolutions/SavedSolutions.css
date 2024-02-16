@@ -54,3 +54,15 @@ section#saved_solutions button {
     margin: auto;
     margin-top: 20px;
 }
+
+@media screen and (max-width: 540px) {
+    section#saved_solutions .saved_box {
+        width: 240px;
+    }
+    section#saved_solutions .saved_box span {
+        font-size: 12px;
+    }
+    section#saved_solutions h3 {
+        font-size: 14px;
+    }
+}
