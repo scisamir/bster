@@ -13,11 +13,8 @@ function Layout() {
     return (
         <section id="layout">
             <nav>
-                <div
-                    style={{background: '#000', color: '#fff', borderRadius: '16px', padding: '2px 8px'}}
-                    onClick={() => navigate(-1)}
-                >
-                    <TiArrowBack color='#fff' fontSize='1.2rem' />
+                <div onClick={() => navigate(-1)}>
+                    <TiArrowBack color='#fff' fontSize='1.5rem' />
                 </div>
                 <Link to='/' className='nav_links'>
                     <IoMdHome fontSize='1.8rem' />

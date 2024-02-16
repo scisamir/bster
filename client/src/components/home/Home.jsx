@@ -11,7 +11,7 @@ function Home() {
             </div>
             <div id="intro">
                 <div>
-                    <Link to='/topics'>Feature</Link>
+                    <Link to='/topics'>Featured</Link>
                     <Link to='/about'>About</Link>
                 </div>
                 <img src={logo} alt="bster logo" id="logo" />

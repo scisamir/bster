@@ -177,7 +177,7 @@ function Correlation({ savedSolutions, setSavedSolutions }) {
 
                     <button disabled={(correlationSolution && !correlationSolution.correlationR) || (savedSolutions.inView && savedSolutions.inView.disable_input)} onClick={handleSaveSolution}>Save Solution</button>
                 </div>
-
+ 
                 <form onSubmit={handleSubmit}>
                     <div>Please input the values of x and y</div>
                     <label htmlFor="correlaton_x">x: <input disabled={savedSolutions.inView && savedSolutions.inView.disable_input} type="number" step={0.01} name="correlaton_x" id="correlaton_x" /></label>
