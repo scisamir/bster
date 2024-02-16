@@ -175,7 +175,7 @@ function Correlation({ savedSolutions, setSavedSolutions }) {
                     <div className="correlation_answers"><span style={{ fontWeight: 600 }}>Sxy</span> = &#8721;xy - (&#8721;x) (&#8721;y) / n = {correlationSolution && correlationSolution.correlationSxy ? correlationSolution.correlationSxy : ""}</div>
                     <div className="correlation_answers"><span style={{ fontWeight: 600 }}>r</span> = Sxy / (&#8730; Sxx * Sxy) = {correlationSolution && correlationSolution.correlationR ? correlationSolution.correlationR : ""}</div>
 
-                    <button disabled={correlationSolution && !correlationSolution.correlationR || (savedSolutions.inView && savedSolutions.inView.disable_input)} onClick={handleSaveSolution}>Save Solution</button>
+                    <button disabled={(correlationSolution && !correlationSolution.correlationR) || (savedSolutions.inView && savedSolutions.inView.disable_input)} onClick={handleSaveSolution}>Save Solution</button>
                 </div>
 
                 <form onSubmit={handleSubmit}>
