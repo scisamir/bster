@@ -10,12 +10,14 @@ function Correlation({ savedSolutions, setSavedSolutions }) {
     const [correlationTDNumber, setCorrelationTDNumber] = useState(0);
     const [correlationSolution, setCorrelationSolution] = useState({});
     const [correlationId, setCorrelationId] = useState(newId);
+    const [correlationDate, setCorrelationDate] = useState(null);
 
     useEffect(() => {
         if (savedSolutions.inView) {
             setCorrelationId(savedSolutions.inView.id);
             setCorrelationTableData(savedSolutions.inView.correlationTable);
             setCorrelationSolution(savedSolutions.inView.correlationSolution);
+            setCorrelationDate(savedSolutions.inView.correlationDate);
         }
     }, [savedSolutions])
 
@@ -96,10 +98,13 @@ function Correlation({ savedSolutions, setSavedSolutions }) {
     }
 
     const handleSaveSolution = () => {
+        const newDate = new Date();
+
         const newSolution = {
             id: correlationId,
             correlationTable: correlationTableData,
-            correlationSolution: correlationSolution
+            correlationSolution: correlationSolution,
+            date: `${newDate.getHours()}:${newDate.getMinutes()}:${newDate.getSeconds()}; ${newDate.getDate()}/${newDate.getMonth() + 1}/${newDate.getFullYear()}`
         }
 
         let idExists = false;
@@ -114,12 +119,13 @@ function Correlation({ savedSolutions, setSavedSolutions }) {
             setSavedSolutions((prevState) => ({
                 ...prevState,
                 correlation: prevState.correlation ? [...prevState.correlation, newSolution] : [newSolution],
-                inView: { ...newSolution, disable_input: false }
+                inView: { ...newSolution, disable_input: true }
             }));
 
             toast("Solution successfully saved!");
         }
 
+        console.log("newSolution daate:", newSolution.date);
         console.log("The saved solutions", savedSolutions);
     }
 
@@ -164,12 +170,12 @@ function Correlation({ savedSolutions, setSavedSolutions }) {
                         )}
                     </table>
 
-                    <div className="correlation_answers"><span style={{ fontWeight: 600 }}>Sxx</span> = &#8721;x<sup>2</sup> - (&#8721;x)<sup>2</sup> / n = {correlationSolution.correlationSxx ? correlationSolution.correlationSxx : ""}</div>
-                    <div className="correlation_answers"><span style={{ fontWeight: 600 }}>Syy</span> = &#8721;y<sup>2</sup> - (&#8721;y)<sup>2</sup> / n = {correlationSolution.correlationSyy ? correlationSolution.correlationSyy : ""}</div>
-                    <div className="correlation_answers"><span style={{ fontWeight: 600 }}>Sxy</span> = &#8721;xy - (&#8721;x) (&#8721;y) / n = {correlationSolution.correlationSxy ? correlationSolution.correlationSxy : ""}</div>
-                    <div className="correlation_answers"><span style={{ fontWeight: 600 }}>r</span> = Sxy / (&#8730; Sxx * Sxy) = {correlationSolution.correlationR ? correlationSolution.correlationR : ""}</div>
+                    <div className="correlation_answers"><span style={{ fontWeight: 600 }}>Sxx</span> = &#8721;x<sup>2</sup> - (&#8721;x)<sup>2</sup> / n = {correlationSolution && correlationSolution.correlationSxx ? correlationSolution.correlationSxx : ""}</div>
+                    <div className="correlation_answers"><span style={{ fontWeight: 600 }}>Syy</span> = &#8721;y<sup>2</sup> - (&#8721;y)<sup>2</sup> / n = {correlationSolution && correlationSolution.correlationSyy ? correlationSolution.correlationSyy : ""}</div>
+                    <div className="correlation_answers"><span style={{ fontWeight: 600 }}>Sxy</span> = &#8721;xy - (&#8721;x) (&#8721;y) / n = {correlationSolution && correlationSolution.correlationSxy ? correlationSolution.correlationSxy : ""}</div>
+                    <div className="correlation_answers"><span style={{ fontWeight: 600 }}>r</span> = Sxy / (&#8730; Sxx * Sxy) = {correlationSolution && correlationSolution.correlationR ? correlationSolution.correlationR : ""}</div>
 
-                    <button disabled={!correlationSolution.correlationR || (savedSolutions.inView && savedSolutions.inView.disable_input)} onClick={handleSaveSolution}>Save Solution</button>
+                    <button disabled={correlationSolution && !correlationSolution.correlationR || (savedSolutions.inView && savedSolutions.inView.disable_input)} onClick={handleSaveSolution}>Save Solution</button>
                 </div>
 
                 <form onSubmit={handleSubmit}>

@@ -27,7 +27,7 @@ function Layout() {
                     <IoMdSearch fontSize='1.8rem' />
                     <span>Search</span>
                 </Link>
-                <Link to='/' className='nav_links'>
+                <Link to='/about' className='nav_links'>
                     <IoMdPlayCircle fontSize='1.8rem' />
                     <span>Bio</span>
                 </Link>
@@ -35,7 +35,7 @@ function Layout() {
                     <FaSave fontSize='1.8rem' />
                     <span>Saved</span>
                 </Link>
-                <Link to='*' className='nav_links'>
+                <Link to='/profile' className='nav_links'>
                     <BsFillPersonFill fontSize='1.8rem' />
                     <span>Profile</span>
                 </Link>

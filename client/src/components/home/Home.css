@@ -25,6 +25,21 @@ section#home div#intro {
     text-align: center;
 }
 
+section#home div#intro > div {
+    position: absolute;
+    right: 24px;
+    top: 24px;
+    display: flex;
+    gap: 30px;
+}
+
+section#home div#intro > div > * {
+    font-size: 20px;
+    color: #000;
+    text-decoration: none;
+    font-weight: 600;
+}
+
 section#home div#intro img {
     margin-bottom: 20px;
 }
@@ -49,10 +64,17 @@ section#home div#intro button {
     padding: 15px 12px;
     border-radius: 8px;
     border: none;
-    background-color: #7fffd4;
+    background-color: #000;
     margin: 40px auto 0 auto;
     font-weight: 600;
     font-size: 20px;
     cursor: pointer;
-    color: #333;
+    color: #fff;
+}
+
+section#home div#intro > a#copyright {
+    position: absolute;
+    bottom: 20px;
+    right: 24px;
+    font-weight: 500;
 }

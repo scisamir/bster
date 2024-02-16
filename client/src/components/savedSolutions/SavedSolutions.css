@@ -3,12 +3,26 @@ section#saved_solutions h2 {
     padding-top: 30px;
 }
 
+section#saved_solutions > div {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
 section#saved_solutions .saved_box {
     width: 300px;
     height: 200px;
     background-color: #dedede;
     border-radius: 8px;
     margin-bottom: 20px;
+    position: relative;
+}
+
+section#saved_solutions .saved_box span {
+    position: absolute;
+    right: 0;
+    padding: 10px 10px;
+    font-weight: 500;
 }
 
 section#saved_solutions h3 {

@@ -1,0 +1,48 @@
+section#about h1 {
+    font-size: 28px;
+    padding-top: 30px;
+    padding-bottom: 10px;
+}
+
+section#about > p > span,
+section#about > p#meet_me {
+    display: inline-block;
+    width: 70%;
+}
+
+section#about > h2 {
+    margin-top: 20px;
+}
+
+section#about > div {
+    display: flex;
+    gap: 80px;
+    align-items: center;
+    margin-bottom: 36px;
+    margin-top: 20px;
+    flex-wrap: wrap
+}
+
+section#about > div > img {
+    height: 240px;
+    border-radius: 8px;
+}
+
+section#about > div > div {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+section#about > div > div > * {
+    color: #000;
+}
+
+section#about p#project_repo {
+    font-size: 20px;
+    font-weight: 500;
+}
+
+section#about p#project_repo > a {
+    color: #000;
+}

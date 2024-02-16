@@ -1,11 +1,13 @@
 import './App.css'
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
-import Correlation from './components/Correlation/Correlation'
-import Home from './components/Home/Home'
+import Correlation from './components/correlation/Correlation'
+import Home from './components/home/Home'
 import NoPage from './components/NoPage'
-import Topics from './components/Topics/Topics'
+import Topics from './components/topics/Topics'
 import Layout from './components/layout/Layout'
-import SavedSolutions from './components/savedSolutions/savedSolutions'
+import SavedSolutions from './components/savedSolutions/SavedSolutions'
+import About from './components/about/About'
+import Profile from './components/profile/Profile'
 import { useState, useEffect } from 'react'
 
 
@@ -32,6 +34,8 @@ function App() {
           <Route path='topics' element={<Topics />} />
           <Route path='correlation' element={<Correlation savedSolutions={savedSolutions} setSavedSolutions={setSavedSolutions} />} />
           <Route path='saved' element={<SavedSolutions savedSolutions={savedSolutions} setSavedSolutions={setSavedSolutions} />} />
+          <Route path='about' element={<About />} />
+          <Route path='profile' element={<Profile />} />
         </Route>
         <Route path='*' element={<NoPage />} />
       </Routes>
