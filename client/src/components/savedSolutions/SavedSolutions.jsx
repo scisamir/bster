@@ -1,5 +1,5 @@
 import { useNavigate } from 'react-router-dom';
-import './savedSolutions.css'
+import './SavedSolutions.css'
 
 function SavedSolutions({ savedSolutions, setSavedSolutions }) {
     const navigate = useNavigate();
